@@ -90,20 +90,14 @@ const pages = [
     title: 'Professional Cleaning Services in Crawfordville, FL | Swiftclean Ladies',
     meta: 'Swiftclean Ladies provides residential, commercial, deep cleaning, recurring cleaning, one-time cleaning, and organizational services in Crawfordville, Saint Marks, and Panacea, FL.',
     content: `
-      <section class="hero text-left">
-        <div class="container hero-grid">
-          <div class="hero-content">
-            <h1>Professional Cleaning Services in Crawfordville, FL</h1>
-            <p class="lead">Expert Residential, Commercial, Deep Cleaning, and Organizational Services</p>
-            <p class="hero-desc">Swiftclean Ladies delivers dependable, detail-focused cleaning services for homes, offices, and new house developments in Crawfordville, Saint Marks, and Panacea, FL. Whether you need recurring cleaning, a one-time service, deep cleaning, commercial cleaning, or professional organization, our team is here to create a spotless, welcoming space tailored to your needs.</p>
-            <div class="hero-actions" style="justify-content: flex-start;">
-              <a href="/contact.html" class="btn btn-secondary">Get a Free Quote</a>
-              <a href="/booking.html" class="btn btn-primary">Book Now</a>
+      <section class="hero-bg" style="background-image: url('/images/hero-banner.png');">
+        <div class="container text-left max-w-5xl text-white">
+            <h1 style="color: white; font-size: 4.5rem; letter-spacing: -0.02em; margin-bottom: 1.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Professional Cleaning Services <br>in Crawfordville, FL</h1>
+            <p class="lead" style="color: rgba(255,255,255,0.9); font-size: 1.5rem; font-weight: 300; max-width: 800px; margin-bottom: 2rem; text-shadow: 0 1px 3px rgba(0,0,0,0.5);">Swiftclean Ladies delivers dependable, detail-focused cleaning services for homes, offices, and new house developments in Crawfordville, Saint Marks, and Panacea, FL.</p>
+            <div class="hero-actions">
+               <a href="/booking.html" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem;">Book Now</a>
+               <a href="/contact.html" class="btn btn-outline text-white" style="border-color: white; color: white; padding: 1rem 2rem; font-size: 1.1rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(4px);">Get a Free Quote</a>
             </div>
-          </div>
-          <div class="hero-image">
-             <img src="/images/hero-banner.png" alt="Sparkling clean living room" class="b-radius shadow-lg w-full">
-          </div>
         </div>
       </section>
 
