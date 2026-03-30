@@ -17,7 +17,7 @@ const layout = (title, metaDesc, content, pathStr) => `<!DOCTYPE html>
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <a href="/" class="logo">Swiftclean Ladies</a>
+            <a href="/" class="logo"><img src="https://assets.cdn.filesafe.space/gGtmQYvc0s6yNrsidLE4/media/69ca6cf423b082470f691cb7.svg" alt="Swiftclean Ladies" style="max-height: 50px;"></a>
             <nav class="main-nav">
                 <a href="/" class="${pathStr === '/' ? 'active' : ''}">Home</a>
                 <a href="/about.html" class="${pathStr === '/about.html' ? 'active' : ''}">About</a>
@@ -89,15 +89,31 @@ const pages = [
     title: 'Professional Cleaning Services in Crawfordville, FL | Swiftclean Ladies',
     meta: 'Swiftclean Ladies provides residential, commercial, deep cleaning, recurring cleaning, one-time cleaning, and organizational services in Crawfordville, Saint Marks, and Panacea, FL.',
     content: `
-      <section class="hero text-center">
-        <div class="container hero-content">
-          <h1>Professional Cleaning Services in Crawfordville, FL</h1>
-          <p class="lead">Expert Residential, Commercial, Deep Cleaning, and Organizational Services</p>
-          <p class="hero-desc">Swiftclean Ladies delivers dependable, detail-focused cleaning services for homes, offices, and new house developments in Crawfordville, Saint Marks, and Panacea, FL. Whether you need recurring cleaning, a one-time service, deep cleaning, commercial cleaning, or professional organization, our team is here to create a spotless, welcoming space tailored to your needs.</p>
-          <div class="hero-actions">
-            <a href="/contact.html" class="btn btn-secondary">Get a Free Quote</a>
-            <a href="/booking.html" class="btn btn-primary">Book Now</a>
+      <section class="hero text-left">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1>Professional Cleaning Services in Crawfordville, FL</h1>
+            <p class="lead">Expert Residential, Commercial, Deep Cleaning, and Organizational Services</p>
+            <p class="hero-desc">Swiftclean Ladies delivers dependable, detail-focused cleaning services for homes, offices, and new house developments in Crawfordville, Saint Marks, and Panacea, FL. Whether you need recurring cleaning, a one-time service, deep cleaning, commercial cleaning, or professional organization, our team is here to create a spotless, welcoming space tailored to your needs.</p>
+            <div class="hero-actions" style="justify-content: flex-start;">
+              <a href="/contact.html" class="btn btn-secondary">Get a Free Quote</a>
+              <a href="/booking.html" class="btn btn-primary">Book Now</a>
+            </div>
           </div>
+          <div class="hero-image">
+             <img src="/hero-clean.png" alt="Sparkling clean living room" class="b-radius shadow-lg w-full">
+          </div>
+        </div>
+      </section>
+
+      <section class="after-work-gallery default-padding bg-light text-center">
+        <div class="container max-w-4xl">
+           <h2>See the Swiftclean Difference</h2>
+           <p>Immaculate results from our professional cleaning services</p>
+           <div class="grid grid-2 mt-8">
+               <img src="https://assets.cdn.filesafe.space/gGtmQYvc0s6yNrsidLE4/media/69ca6cf40c5c8932a1b48df7.jpg" alt="After work - spotless clean" class="b-radius shadow-md w-full">
+               <img src="https://assets.cdn.filesafe.space/gGtmQYvc0s6yNrsidLE4/media/69ca6cf4b862d7cf581f019f.jpg" alt="After work - perfect shine" class="b-radius shadow-md w-full">
+           </div>
         </div>
       </section>
 
