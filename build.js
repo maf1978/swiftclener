@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const layout = (title, metaDesc, content, pathStr) => `<!DOCTYPE html>
+const layout = (title, metaDesc, content, pathStr, schemaStr) => `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,7 @@ const layout = (title, metaDesc, content, pathStr) => `<!DOCTYPE html>
     <meta name="description" content="${metaDesc}">
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    ${schemaStr ? `<script type="application/ld+json">\n${schemaStr}\n</script>` : ''}
 </head>
 <body>
     <header class="site-header">
@@ -850,11 +851,135 @@ const pages = [
         </div>
       </section>
     `
+  },
+  {
+    path: 'privacy-policy.html',
+    title: 'Privacy Policy | Swiftclean Ladies',
+    meta: 'Privacy Policy for Swiftclean Ladies. Learn how we collect, use, and protect your information.',
+    content: `
+      <section class="hero text-center hero-sm">
+        <div class="container max-w-4xl">
+          <h1>Privacy Policy</h1>
+          <p class="lead">How we collect, use, and protect your information</p>
+        </div>
+      </section>
+      <section class="default-padding max-w-4xl center-block text-content">
+         <h2>1. Information We Collect</h2>
+         <p>Swiftclean Ladies collects information you provide directly to us when you request a quote, schedule a service, or contact us. This may include your name, email address, phone number, physical address, and details about your home or business.</p>
+         
+         <h2>2. How We Use Your Information</h2>
+         <p>We use the information we collect to provide, maintain, and improve our cleaning services; process your transactions and send related information; respond to your comments, questions, and requests; and provide customer service.</p>
+         
+         <h2>3. Information Sharing</h2>
+         <p>We do not share your personal information with third parties except as necessary to provide our services, comply with the law, or protect our rights. We do not sell your personal data.</p>
+         
+         <h2>4. Data Security</h2>
+         <p>We take reasonable measures to help protect your personal information from loss, theft, misuse, unauthorized access, disclosure, alteration, and destruction.</p>
+         
+         <h2>5. Contact Us</h2>
+         <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:swift.clean25@gmail.com">swift.clean25@gmail.com</a>.</p>
+      </section>
+    `
+  },
+  {
+    path: 'terms-conditions.html',
+    title: 'Terms & Conditions | Swiftclean Ladies',
+    meta: 'Terms and Conditions for Swiftclean Ladies cleaning services in Crawfordville, FL.',
+    content: `
+      <section class="hero text-center hero-sm">
+        <div class="container max-w-4xl">
+          <h1>Terms & Conditions</h1>
+          <p class="lead">Rules and guidelines for our services</p>
+        </div>
+      </section>
+      <section class="default-padding max-w-4xl center-block text-content">
+         <h2>1. Agreement to Terms</h2>
+         <p>By accessing our website and using the services of Swiftclean Ladies, you agree to be bound by these Terms and Conditions. If you disagree with any part of these terms, you may not access our services.</p>
+         
+         <h2>2. Service Booking and Cancellation</h2>
+         <p>We require at least 24 hours' notice for cancellations. Cancellations made with less than 24 hours' notice may be subject to a cancellation fee.</p>
+         
+         <h2>3. Access to Property</h2>
+         <p>Clients are required to provide access to the property at the scheduled time of service. If our team is unable to access the property, a lockout fee may apply.</p>
+         
+         <h2>4. Satisfaction Guarantee</h2>
+         <p>Your satisfaction is our priority. If you are not satisfied with our service, please contact us within 24 hours. We will make arrangements to return and re-clean the overlooked areas.</p>
+         
+         <h2>5. Liability</h2>
+         <p>While we take the utmost care while cleaning your home or office, accidents can transpire. Our company is fully bonded and insured to protect against significant damage.</p>
+         
+         <h2>6. Contact Us</h2>
+         <p>For any questions regarding these Terms, contact us at <a href="mailto:swift.clean25@gmail.com">swift.clean25@gmail.com</a>.</p>
+      </section>
+    `
   }
 ];
 
 pages.forEach(p => {
-  const finalHtml = layout(p.title, p.meta, p.content, '/' + p.path);
+  let schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": p.title,
+    "description": p.meta,
+    "url": "https://swiftcleanladies.com/" + p.path.replace('index.html', '')
+  };
+  
+  if (p.path === 'index.html') {
+    schema = {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Swiftclean Ladies",
+      "image": "https://assets.cdn.filesafe.space/gGtmQYvc0s6yNrsidLE4/media/69ca6cf423b082470f691cb7.svg",
+      "description": p.meta,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "117 Allen Harvey ST",
+        "addressLocality": "Crawfordville",
+        "addressRegion": "FL",
+        "postalCode": "32327",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-850-815-6998",
+      "areaServed": ["Crawfordville, FL", "Saint Marks, FL", "Panacea, FL"]
+    };
+  } else if (p.path.includes('cleaning') || p.path.includes('services')) {
+    schema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": p.title.split('|')[0].trim(),
+      "provider": {
+        "@type": "HomeAndConstructionBusiness",
+        "name": "Swiftclean Ladies"
+      },
+      "areaServed": ["Crawfordville, FL", "Saint Marks, FL", "Panacea, FL"],
+      "description": p.meta
+    };
+  } else if (p.path === 'faq.html') {
+    schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What types of cleaning services do you offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Swiftclean Ladies offers recurring cleaning, one-time cleaning, deep cleaning, commercial cleaning, new house development cleaning, and organizational services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your cleaners insured and background-checked?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Swiftclean Ladies is a fully licensed, bonded, and insured professional company for your peace of mind."
+          }
+        }
+      ]
+    };
+  }
+
+  const finalHtml = layout(p.title, p.meta, p.content, '/' + p.path, JSON.stringify(schema, null, 2));
   fs.writeFileSync(path.join(__dirname, p.path), finalHtml);
   console.log('Created:', p.path);
 });
