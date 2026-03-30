@@ -101,7 +101,7 @@ const pages = [
             </div>
           </div>
           <div class="hero-image">
-             <img src="/hero-clean.png" alt="Sparkling clean living room" class="b-radius shadow-lg w-full">
+             <img src="/images/hero-banner.png" alt="Sparkling clean living room" class="b-radius shadow-lg w-full">
           </div>
         </div>
       </section>
@@ -279,10 +279,15 @@ const pages = [
     title: 'Cleaning Services in Crawfordville, FL | Swiftclean Ladies',
     meta: 'Explore Swiftclean Ladies services, including recurring cleaning, one-time cleaning, deep cleaning, commercial cleaning, and organizational services.',
     content: `
-      <section class="hero text-center hero-sm">
-        <div class="container">
-          <h1>Our Cleaning and Organization Services</h1>
-          <p class="lead">Professional solutions for homes, businesses, and new house developments</p>
+      <section class="hero text-left hero-sm">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1>Our Cleaning and Organization Services</h1>
+            <p class="lead">Professional solutions for homes, businesses, and new house developments</p>
+          </div>
+          <div class="hero-image">
+             <img src="/images/residential.png" alt="Residential Cleaning" class="b-radius shadow-lg w-full">
+          </div>
         </div>
       </section>
 
@@ -334,10 +339,15 @@ const pages = [
     title: 'Recurring Cleaning Services in Crawfordville, FL | Swiftclean Ladies',
     meta: 'Keep your home consistently clean with recurring cleaning services from Swiftclean Ladies in Crawfordville, FL.',
     content: `
-      <section class="hero text-center hero-sm">
-        <div class="container max-w-4xl">
-          <h1>Recurring Cleaning Services in Crawfordville, FL</h1>
-          <p class="lead">Flexible ongoing cleaning to keep your home consistently fresh and inviting</p>
+      <section class="hero text-left hero-sm">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1>Recurring Cleaning Services in Crawfordville, FL</h1>
+            <p class="lead">Flexible ongoing cleaning to keep your home consistently fresh and inviting</p>
+          </div>
+          <div class="hero-image">
+             <img src="/images/recurring.png" alt="Recurring Cleaning Service" class="b-radius shadow-lg w-full">
+          </div>
         </div>
       </section>
 
@@ -392,10 +402,15 @@ const pages = [
     title: 'One-Time Cleaning Services in Crawfordville, FL | Swiftclean Ladies',
     meta: 'Book a flexible one-time cleaning service in Crawfordville, FL with Swiftclean Ladies. Customized cleaning based on your priorities and schedule.',
     content: `
-      <section class="hero text-center hero-sm">
-        <div class="container max-w-4xl">
-          <h1>One-Time Cleaning Services in Crawfordville, FL</h1>
-          <p class="lead">Flexible cleaning tailored to your priorities and schedule</p>
+      <section class="hero text-left hero-sm">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1>One-Time Cleaning Services in Crawfordville, FL</h1>
+            <p class="lead">Flexible cleaning tailored to your priorities and schedule</p>
+          </div>
+          <div class="hero-image">
+             <img src="/images/one-time.png" alt="One-Time Cleaning Service" class="b-radius shadow-lg w-full">
+          </div>
         </div>
       </section>
 
@@ -441,10 +456,15 @@ const pages = [
     title: 'Deep Cleaning Services in Crawfordville, FL | Swiftclean Ladies',
     meta: 'Professional deep cleaning services in Crawfordville, FL for homes that need a detailed, comprehensive clean.',
     content: `
-      <section class="hero text-center hero-sm">
-        <div class="container max-w-4xl">
-          <h1>Deep Cleaning Services in Crawfordville, FL</h1>
-          <p class="lead">A more detailed clean for homes that need extra attention</p>
+      <section class="hero text-left hero-sm">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1>Deep Cleaning Services in Crawfordville, FL</h1>
+            <p class="lead">A more detailed clean for homes that need extra attention</p>
+          </div>
+          <div class="hero-image">
+             <img src="/images/deep.png" alt="Deep Cleaning Services" class="b-radius shadow-lg w-full">
+          </div>
         </div>
       </section>
 
@@ -510,10 +530,15 @@ const pages = [
     title: 'Commercial Cleaning Services in Crawfordville, FL | Swiftclean Ladies',
     meta: 'Commercial cleaning for offices and new house developments in Crawfordville, FL from Swiftclean Ladies.',
     content: `
-      <section class="hero text-center hero-sm">
-        <div class="container max-w-4xl">
-          <h1>Commercial Cleaning Services in Crawfordville, FL</h1>
-          <p class="lead">Professional cleaning for offices and new house developments</p>
+      <section class="hero text-left hero-sm">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1>Commercial Cleaning Services in Crawfordville, FL</h1>
+            <p class="lead">Professional cleaning for offices and new house developments</p>
+          </div>
+          <div class="hero-image">
+             <img src="/images/commercial.png" alt="Commercial Cleaning Service" class="b-radius shadow-lg w-full">
+          </div>
         </div>
       </section>
 
@@ -537,6 +562,7 @@ const pages = [
              <div class="card bg-light">
                  <h2>New House Development Cleaning</h2>
                  <p>Swiftclean Ladies also offers cleaning support for new house developments. We help ensure properties are clean, pristine, and ready for occupancy, providing essential finishing touches before move-in day.</p>
+                 <img src="/images/new-construction.png" alt="New Construction Cleaning" class="b-radius shadow-md w-full mt-4">
              </div>
           </div>
         </div>
@@ -572,10 +598,15 @@ const pages = [
     title: 'Professional Home Organization in Crawfordville, FL | Swiftclean Ladies',
     meta: 'Swiftclean Ladies offers personalized home organization services in Crawfordville, FL for closets, pantries, home offices, and storage spaces.',
     content: `
-      <section class="hero text-center hero-sm">
-        <div class="container max-w-4xl">
-          <h1>Professional Organizational Services in Crawfordville, FL</h1>
-          <p class="lead">Personalized organization for calmer, cleaner, more efficient spaces</p>
+      <section class="hero text-left hero-sm">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1>Professional Organizational Services in Crawfordville, FL</h1>
+            <p class="lead">Personalized organization for calmer, cleaner, more efficient spaces</p>
+          </div>
+          <div class="hero-image">
+             <img src="/images/organization.png" alt="Home Organization Services" class="b-radius shadow-lg w-full">
+          </div>
         </div>
       </section>
 
