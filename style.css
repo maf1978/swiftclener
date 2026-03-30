@@ -1,14 +1,14 @@
 :root {
   /* Colors */
-  --color-primary: #1F2937; /* Deep Charcoal / Slate */
-  --color-primary-dark: #111827;
-  --color-secondary: #D4AF37; /* Warm Champagne / Taupe */
-  --color-secondary-dark: #B5952F;
+  --color-primary: #161616; /* True Logo Charcoal */
+  --color-primary-dark: #000000;
+  --color-secondary: #2E2E2E; /* Secondary Logo Accent */
+  --color-secondary-dark: #111111;
   --color-bg: #FAF9F6; /* Warm Alabaster White */
   --color-surface: #FFFFFF;
-  --color-text: #374151;
-  --color-text-muted: #6B7280;
-  --color-border: #E5E7EB;
+  --color-text: #222222;
+  --color-text-muted: #666666;
+  --color-border: #EAEAEA;
   
   /* Typography */
   --font-family: 'Lexend', sans-serif;
