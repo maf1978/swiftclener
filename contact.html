@@ -21,19 +21,36 @@
     <header class="site-header">
         <div class="container header-inner">
             <a href="/" class="logo"><img src="https://assets.cdn.filesafe.space/gGtmQYvc0s6yNrsidLE4/media/69ca6cf423b082470f691cb7.svg" alt="Swiftclean Ladies" style="max-height: 50px;"></a>
-            <nav class="main-nav">
+            <nav class="main-nav" id="main-nav">
                 <a href="/" class="">Home</a>
                 <a href="/about.html" class="">About</a>
                 <a href="/services.html" class="">Services</a>
                 <a href="/faq.html" class="">FAQ</a>
                 <a href="/contact.html" class="active">Contact</a>
+                <a href="/booking.html" class="btn btn-primary nav-cta-mobile">Book Now</a>
             </nav>
             <div class="header-actions">
-                <span class="phone">(850) 815-6998</span>
+                <span class="phone"><a href="tel:8508156998">(850) 815-6998</a></span>
                 <a href="/booking.html" class="btn btn-primary">Book Now</a>
             </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const nav = document.getElementById('main-nav');
+      hamburger.addEventListener('click', () => {
+        const open = nav.classList.toggle('nav-open');
+        hamburger.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', open);
+      });
+      nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        nav.classList.remove('nav-open');
+        hamburger.classList.remove('is-open');
+      }));
+    </script>
 
     <main class="main-content">
         
